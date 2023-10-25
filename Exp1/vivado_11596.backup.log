@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Sep 21 12:42:57 2023
+# Process ID: 11596
+# Current directory: D:/Exp1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9768 D:\Exp1\Exp1.xpr
+# Log file: D:/Exp1/vivado.log
+# Journal file: D:/Exp1\vivado.jou
+#-----------------------------------------------------------sstart_guioopen_project D:/Exp1/Exp1.xprIINFO: [Project 1-313] Project file moved from 'C:/Users/haozh/DeINFO: [Common 17-344] 'open_project' was cancelled
+eexit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 21 12:43:54 2023...
+g IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado21.1/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:33 . Memory (MB): peak = 1099.578 ; gain = 0.000
+update_compile_order -fileset sources_1

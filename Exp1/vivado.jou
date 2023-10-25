@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Oct  3 21:19:28 2023
+# Process ID: 17220
+# Current directory: D:/Exp1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15408 D:\Exp1\Exp1.xpr
+# Log file: D:/Exp1/vivado.log
+# Journal file: D:/Exp1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Exp1/Exp1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/Exp1/code/sim/core_sim_behav.wcfg
+source core_sim.tcl
+restart
+relaunch_sim
+restart
+run 20 ns
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_sim

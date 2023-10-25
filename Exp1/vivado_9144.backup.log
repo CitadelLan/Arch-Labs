@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.3 (64-bit)
+# SW Build 3173277 on Wed Apr  7 05:07:49 MDT 2021
+# IP Build 3174024 on Wed Apr  7 23:42:35 MDT 2021
+# Start of session at: Tue Sep 19 18:59:13 2023
+# Process ID: 9144
+# Current directory: D:/Exp1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent644 D:\Exp1\Exp1.xpr
+# Log file: D:/Exp1/vivado.log
+# Journal file: D:/Exp1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 19 19:03:52 2023...
