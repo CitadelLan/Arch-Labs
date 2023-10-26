@@ -2,15 +2,14 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Oct 24 18:54:12 2023
-# Process ID: 19400
-# Current directory: D:/Exp2/Exp2.runs/synth_1
+# Start of session at: Thu Oct 26 14:56:51 2023
+# Process ID: 10808
+# Current directory: D:/Arch Labs/Exp2/Exp2.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: D:/Exp2/Exp2.runs/synth_1/top.vds
-# Journal file: D:/Exp2/Exp2.runs/synth_1\vivado.jou
+# Log file: D:/Arch Labs/Exp2/Exp2.runs/synth_1/top.vds
+# Journal file: D:/Arch Labs/Exp2/Exp2.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1214.438 ; gain = 0.000
 Command: synth_design -top top -part xc7k325tlffg676-2L
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325tl'
@@ -18,20 +17,20 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325
 INFO: [Device 21-403] Loading part xc7k325tlffg676-2L
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7860
-WARNING: [Synth 8-6901] identifier 'DATA_BITS' is used before its declaration [D:/Exp2/code/auxillary/parallel2serial.v:10]
+INFO: [Synth 8-7075] Helper process launched with PID 20880
+WARNING: [Synth 8-6901] identifier 'DATA_BITS' is used before its declaration [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:10]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1214.438 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1249.969 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [D:/Exp2/code/auxillary/top.v:8]
-INFO: [Synth 8-6157] synthesizing module 'clk_diff' [D:/Exp2/code/auxillary/clk_diff.v:7]
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/Arch Labs/Exp2/code/auxillary/top.v:8]
+INFO: [Synth 8-6157] synthesizing module 'clk_diff' [D:/Arch Labs/Exp2/code/auxillary/clk_diff.v:7]
 INFO: [Synth 8-6157] synthesizing module 'IBUFGDS' [D:/UWinXilinX/Vivado/2021.1/scripts/rt/data/unisim_comp.v:52155]
 	Parameter DIFF_TERM bound to: FALSE - type: string 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IBUFGDS' (1#1) [D:/UWinXilinX/Vivado/2021.1/scripts/rt/data/unisim_comp.v:52155]
-INFO: [Synth 8-6155] done synthesizing module 'clk_diff' (2#1) [D:/Exp2/code/auxillary/clk_diff.v:7]
-INFO: [Synth 8-6157] synthesizing module 'my_clk_gen' [D:/Exp2/code/auxillary/my_clk_gen.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'clk_diff' (2#1) [D:/Arch Labs/Exp2/code/auxillary/clk_diff.v:7]
+INFO: [Synth 8-6157] synthesizing module 'my_clk_gen' [D:/Arch Labs/Exp2/code/auxillary/my_clk_gen.v:73]
 INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [D:/UWinXilinX/Vivado/2021.1/scripts/rt/data/unisim_comp.v:59963]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: double 
@@ -62,62 +61,62 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [D:/UWinXilinX/Vivado/2021
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (3#1) [D:/UWinXilinX/Vivado/2021.1/scripts/rt/data/unisim_comp.v:59963]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/UWinXilinX/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1083]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (4#1) [D:/UWinXilinX/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1083]
-INFO: [Synth 8-6155] done synthesizing module 'my_clk_gen' (5#1) [D:/Exp2/code/auxillary/my_clk_gen.v:73]
-INFO: [Synth 8-6157] synthesizing module 'btn_scan' [D:/Exp2/code/auxillary/btn_scan.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'my_clk_gen' (5#1) [D:/Arch Labs/Exp2/code/auxillary/my_clk_gen.v:73]
+INFO: [Synth 8-6157] synthesizing module 'btn_scan' [D:/Arch Labs/Exp2/code/auxillary/btn_scan.v:8]
 	Parameter CLK_FREQ bound to: 25 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'btn_scan' (6#1) [D:/Exp2/code/auxillary/btn_scan.v:8]
-INFO: [Synth 8-6157] synthesizing module 'display' [D:/Exp2/code/auxillary/display.v:7]
-INFO: [Synth 8-6157] synthesizing module 'parallel2serial' [D:/Exp2/code/auxillary/parallel2serial.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'btn_scan' (6#1) [D:/Arch Labs/Exp2/code/auxillary/btn_scan.v:8]
+INFO: [Synth 8-6157] synthesizing module 'display' [D:/Arch Labs/Exp2/code/auxillary/display.v:7]
+INFO: [Synth 8-6157] synthesizing module 'parallel2serial' [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:7]
 	Parameter P_CLK_FREQ bound to: 25 - type: integer 
 	Parameter S_CLK_FREQ bound to: 20 - type: integer 
 	Parameter DATA_BITS bound to: 16 - type: integer 
 	Parameter CODE_ENDIAN bound to: 1 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Exp2/code/auxillary/parallel2serial.v:48]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Exp2/code/auxillary/parallel2serial.v:99]
-INFO: [Synth 8-6155] done synthesizing module 'parallel2serial' (7#1) [D:/Exp2/code/auxillary/parallel2serial.v:7]
-INFO: [Synth 8-6157] synthesizing module 'parallel2serial__parameterized0' [D:/Exp2/code/auxillary/parallel2serial.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:48]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:99]
+INFO: [Synth 8-6155] done synthesizing module 'parallel2serial' (7#1) [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:7]
+INFO: [Synth 8-6157] synthesizing module 'parallel2serial__parameterized0' [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:7]
 	Parameter P_CLK_FREQ bound to: 25 - type: integer 
 	Parameter S_CLK_FREQ bound to: 20 - type: integer 
 	Parameter DATA_BITS bound to: 64 - type: integer 
 	Parameter CODE_ENDIAN bound to: 1 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Exp2/code/auxillary/parallel2serial.v:48]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Exp2/code/auxillary/parallel2serial.v:99]
-INFO: [Synth 8-6155] done synthesizing module 'parallel2serial__parameterized0' (7#1) [D:/Exp2/code/auxillary/parallel2serial.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'display' (8#1) [D:/Exp2/code/auxillary/display.v:7]
-INFO: [Synth 8-6157] synthesizing module 'RV32core' [D:/Exp2/code/core/RV32core.v:4]
-INFO: [Synth 8-6157] synthesizing module 'debug_clk' [D:/Exp2/code/auxillary/debug_clk.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'debug_clk' (9#1) [D:/Exp2/code/auxillary/debug_clk.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG32' [D:/Exp2/code/common/REG32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'REG32' (10#1) [D:/Exp2/code/common/REG32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'add_32' [D:/Exp2/code/common/add_32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'add_32' (11#1) [D:/Exp2/code/common/add_32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'MUX2T1_32' [D:/Exp2/code/common/MUX2T1_32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_32' (12#1) [D:/Exp2/code/common/MUX2T1_32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ROM_D' [D:/Exp2/code/core/ROM_D.v:3]
-INFO: [Synth 8-3876] $readmem data file 'D:\rom1.hex' is read successfully [D:/Exp2/code/core/ROM_D.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'ROM_D' (13#1) [D:/Exp2/code/core/ROM_D.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG_IF_ID' [D:/Exp2/code/core/REG_IF_ID.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'REG_IF_ID' (14#1) [D:/Exp2/code/core/REG_IF_ID.v:22]
-INFO: [Synth 8-6157] synthesizing module 'CtrlUnit' [D:/Exp2/code/core/CtrlUnit.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'CtrlUnit' (15#1) [D:/Exp2/code/core/CtrlUnit.v:4]
-INFO: [Synth 8-6157] synthesizing module 'Regs' [D:/Exp2/code/core/Regs.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'Regs' (16#1) [D:/Exp2/code/core/Regs.v:22]
-INFO: [Synth 8-6157] synthesizing module 'ImmGen' [D:/Exp2/code/core/ImmGen.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (17#1) [D:/Exp2/code/core/ImmGen.v:3]
-INFO: [Synth 8-6157] synthesizing module 'MUX4T1_32' [D:/Exp2/code/common/MUX4T1_32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'MUX4T1_32' (18#1) [D:/Exp2/code/common/MUX4T1_32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'cmp_32' [D:/Exp2/code/common/cmp_32.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'cmp_32' (19#1) [D:/Exp2/code/common/cmp_32.v:3]
-INFO: [Synth 8-6157] synthesizing module 'HazardDetectionUnit' [D:/Exp2/code/core/HazardDetectionUnit.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'HazardDetectionUnit' (20#1) [D:/Exp2/code/core/HazardDetectionUnit.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG_ID_EX' [D:/Exp2/code/core/REG_ID_EX.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'REG_ID_EX' (21#1) [D:/Exp2/code/core/REG_ID_EX.v:22]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Exp2/code/core/ALU.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (22#1) [D:/Exp2/code/core/ALU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG_EX_MEM' [D:/Exp2/code/core/REG_EX_MEM.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'REG_EX_MEM' (23#1) [D:/Exp2/code/core/REG_EX_MEM.v:22]
-INFO: [Synth 8-6157] synthesizing module 'RAM_B' [D:/Exp2/code/core/RAM_B.v:3]
-INFO: [Synth 8-3876] $readmem data file 'ram.hex' is read successfully [D:/Exp2/code/core/RAM_B.v:17]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:48]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:99]
+INFO: [Synth 8-6155] done synthesizing module 'parallel2serial__parameterized0' (7#1) [D:/Arch Labs/Exp2/code/auxillary/parallel2serial.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'display' (8#1) [D:/Arch Labs/Exp2/code/auxillary/display.v:7]
+INFO: [Synth 8-6157] synthesizing module 'RV32core' [D:/Arch Labs/Exp2/code/core/RV32core.v:4]
+INFO: [Synth 8-6157] synthesizing module 'debug_clk' [D:/Arch Labs/Exp2/code/auxillary/debug_clk.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'debug_clk' (9#1) [D:/Arch Labs/Exp2/code/auxillary/debug_clk.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG32' [D:/Arch Labs/Exp2/code/common/REG32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'REG32' (10#1) [D:/Arch Labs/Exp2/code/common/REG32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'add_32' [D:/Arch Labs/Exp2/code/common/add_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'add_32' (11#1) [D:/Arch Labs/Exp2/code/common/add_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX2T1_32' [D:/Arch Labs/Exp2/code/common/MUX2T1_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_32' (12#1) [D:/Arch Labs/Exp2/code/common/MUX2T1_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ROM_D' [D:/Arch Labs/Exp2/code/core/ROM_D.v:3]
+INFO: [Synth 8-3876] $readmem data file 'D:\rom1.hex' is read successfully [D:/Arch Labs/Exp2/code/core/ROM_D.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_D' (13#1) [D:/Arch Labs/Exp2/code/core/ROM_D.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG_IF_ID' [D:/Arch Labs/Exp2/code/core/REG_IF_ID.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'REG_IF_ID' (14#1) [D:/Arch Labs/Exp2/code/core/REG_IF_ID.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CtrlUnit' [D:/Arch Labs/Exp2/code/core/CtrlUnit.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'CtrlUnit' (15#1) [D:/Arch Labs/Exp2/code/core/CtrlUnit.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Regs' [D:/Arch Labs/Exp2/code/core/Regs.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Regs' (16#1) [D:/Arch Labs/Exp2/code/core/Regs.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [D:/Arch Labs/Exp2/code/core/ImmGen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (17#1) [D:/Arch Labs/Exp2/code/core/ImmGen.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MUX4T1_32' [D:/Arch Labs/Exp2/code/common/MUX4T1_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX4T1_32' (18#1) [D:/Arch Labs/Exp2/code/common/MUX4T1_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cmp_32' [D:/Arch Labs/Exp2/code/common/cmp_32.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cmp_32' (19#1) [D:/Arch Labs/Exp2/code/common/cmp_32.v:3]
+INFO: [Synth 8-6157] synthesizing module 'HazardDetectionUnit' [D:/Arch Labs/Exp2/code/core/HazardDetectionUnit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'HazardDetectionUnit' (20#1) [D:/Arch Labs/Exp2/code/core/HazardDetectionUnit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG_ID_EX' [D:/Arch Labs/Exp2/code/core/REG_ID_EX.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'REG_ID_EX' (21#1) [D:/Arch Labs/Exp2/code/core/REG_ID_EX.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Arch Labs/Exp2/code/core/ALU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (22#1) [D:/Arch Labs/Exp2/code/core/ALU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG_EX_MEM' [D:/Arch Labs/Exp2/code/core/REG_EX_MEM.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'REG_EX_MEM' (23#1) [D:/Arch Labs/Exp2/code/core/REG_EX_MEM.v:22]
+INFO: [Synth 8-6157] synthesizing module 'RAM_B' [D:/Arch Labs/Exp2/code/core/RAM_B.v:3]
+INFO: [Synth 8-3876] $readmem data file 'ram.hex' is read successfully [D:/Arch Labs/Exp2/code/core/RAM_B.v:17]
 	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
 	2: Unable to determine number of words or word size in RAM. 
 	3: No valid read/write found for RAM. 
@@ -127,25 +126,25 @@ Reason is one or more of the following :
 	2: Unable to determine number of words or word size in RAM. 
 	3: No valid read/write found for RAM. 
 RAM "data_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'RAM_B' (24#1) [D:/Exp2/code/core/RAM_B.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ExceptionUnit' [D:/Exp2/code/core/ExceptionUnit.v:3]
-INFO: [Synth 8-6157] synthesizing module 'CSRRegs' [D:/Exp2/code/core/CSRRegs.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'CSRRegs' (25#1) [D:/Exp2/code/core/CSRRegs.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Exp2/code/core/ExceptionUnit.v:134]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Exp2/code/core/ExceptionUnit.v:102]
-INFO: [Synth 8-6155] done synthesizing module 'ExceptionUnit' (26#1) [D:/Exp2/code/core/ExceptionUnit.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG_MEM_WB' [D:/Exp2/code/core/REG_MEM_WB.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'REG_MEM_WB' (27#1) [D:/Exp2/code/core/REG_MEM_WB.v:21]
-INFO: [Synth 8-6157] synthesizing module 'CPUTEST' [D:/Exp2/code/auxillary/CPUTEST.v:21]
-INFO: [Synth 8-226] default block is never used [D:/Exp2/code/auxillary/CPUTEST.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'CPUTEST' (28#1) [D:/Exp2/code/auxillary/CPUTEST.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'RV32core' (29#1) [D:/Exp2/code/core/RV32core.v:4]
-INFO: [Synth 8-6157] synthesizing module 'VGA_TESTP' [D:/Exp2/code/auxillary/VGATEST.v:21]
-INFO: [Synth 8-6157] synthesizing module 'Code2Inst' [D:/Exp2/code/auxillary/Code2Inst.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'Code2Inst' (30#1) [D:/Exp2/code/auxillary/Code2Inst.v:2]
-INFO: [Synth 8-226] default block is never used [D:/Exp2/code/auxillary/VGATEST.v:167]
-INFO: [Synth 8-226] default block is never used [D:/Exp2/code/auxillary/VGATEST.v:206]
-INFO: [Synth 8-6157] synthesizing module 'FONT8_16' [D:/Exp2/code/auxillary/Font816.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_B' (24#1) [D:/Arch Labs/Exp2/code/core/RAM_B.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ExceptionUnit' [D:/Arch Labs/Exp2/code/core/ExceptionUnit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSRRegs' [D:/Arch Labs/Exp2/code/core/CSRRegs.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CSRRegs' (25#1) [D:/Arch Labs/Exp2/code/core/CSRRegs.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Arch Labs/Exp2/code/core/ExceptionUnit.v:134]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Arch Labs/Exp2/code/core/ExceptionUnit.v:102]
+INFO: [Synth 8-6155] done synthesizing module 'ExceptionUnit' (26#1) [D:/Arch Labs/Exp2/code/core/ExceptionUnit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG_MEM_WB' [D:/Arch Labs/Exp2/code/core/REG_MEM_WB.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'REG_MEM_WB' (27#1) [D:/Arch Labs/Exp2/code/core/REG_MEM_WB.v:21]
+INFO: [Synth 8-6157] synthesizing module 'CPUTEST' [D:/Arch Labs/Exp2/code/auxillary/CPUTEST.v:21]
+INFO: [Synth 8-226] default block is never used [D:/Arch Labs/Exp2/code/auxillary/CPUTEST.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'CPUTEST' (28#1) [D:/Arch Labs/Exp2/code/auxillary/CPUTEST.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'RV32core' (29#1) [D:/Arch Labs/Exp2/code/core/RV32core.v:4]
+INFO: [Synth 8-6157] synthesizing module 'VGA_TESTP' [D:/Arch Labs/Exp2/code/auxillary/VGATEST.v:21]
+INFO: [Synth 8-6157] synthesizing module 'Code2Inst' [D:/Arch Labs/Exp2/code/auxillary/Code2Inst.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Code2Inst' (30#1) [D:/Arch Labs/Exp2/code/auxillary/Code2Inst.v:2]
+INFO: [Synth 8-226] default block is never used [D:/Arch Labs/Exp2/code/auxillary/VGATEST.v:167]
+INFO: [Synth 8-226] default block is never used [D:/Arch Labs/Exp2/code/auxillary/VGATEST.v:206]
+INFO: [Synth 8-6157] synthesizing module 'FONT8_16' [D:/Arch Labs/Exp2/code/auxillary/Font816.v:2]
 INFO: [Synth 8-6157] synthesizing module 'RAMB16_S1' [D:/UWinXilinX/Vivado/2021.1/scripts/rt/data/unisim_comp.v:94867]
 	Parameter INIT_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111101000000110000001100110011011110110000001100000011010010110000001011111100000000000000000 
 	Parameter INIT_01 bound to: 256'b0000000000000000000000000000000001111110111111111111111111100111110000111111111111111111110110111111111101111110000000000000000000000000000000000000000000000000000100000011100001111100111111101111111011111110111111100110110000000000000000000000000000000000 
@@ -212,59 +211,59 @@ INFO: [Synth 8-6157] synthesizing module 'RAMB16_S1' [D:/UWinXilinX/Vivado/2021.
 	Parameter INIT_3E bound to: 256'b0000000000000000000000000000000000011000000110000001100000011000000110000000000000011000000110000001100000011000000000000000000000000000000000000000000000000000011100000001100000011000000110000001100000001110000110000001100000011000011100000000000000000000 
 	Parameter INIT_3F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001101110001110110000000000000000000000000000000000000000000000000000000001111111011000110110001101100011001101100001110000001000000000000000000000000000000000000 
 INFO: [Synth 8-6155] done synthesizing module 'RAMB16_S1' (31#1) [D:/UWinXilinX/Vivado/2021.1/scripts/rt/data/unisim_comp.v:94867]
-INFO: [Synth 8-6155] done synthesizing module 'FONT8_16' (32#1) [D:/Exp2/code/auxillary/Font816.v:2]
-INFO: [Synth 8-6157] synthesizing module 'vga' [D:/Exp2/code/auxillary/vga.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga' (33#1) [D:/Exp2/code/auxillary/vga.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'VGA_TESTP' (34#1) [D:/Exp2/code/auxillary/VGATEST.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'top' (35#1) [D:/Exp2/code/auxillary/top.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'FONT8_16' (32#1) [D:/Arch Labs/Exp2/code/auxillary/Font816.v:2]
+INFO: [Synth 8-6157] synthesizing module 'vga' [D:/Arch Labs/Exp2/code/auxillary/vga.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (33#1) [D:/Arch Labs/Exp2/code/auxillary/vga.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_TESTP' (34#1) [D:/Arch Labs/Exp2/code/auxillary/VGATEST.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'top' (35#1) [D:/Arch Labs/Exp2/code/auxillary/top.v:8]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1214.438 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1249.969 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.438 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1249.969 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1214.438 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1249.969 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1214.438 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1249.969 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Exp2/code/constraint.xdc]
-Finished Parsing XDC File [D:/Exp2/code/constraint.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Exp2/code/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [D:/Arch Labs/Exp2/code/constraint.xdc]
+Finished Parsing XDC File [D:/Arch Labs/Exp2/code/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Arch Labs/Exp2/code/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1344.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1351.379 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IBUFGDS => IBUFDS: 1 instance 
   RAMB16_S1 => RAMB18E1: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1344.055 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1351.379 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1344.055 ; gain = 129.617
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1351.379 ; gain = 101.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tlffg676-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1344.055 ; gain = 129.617
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1351.379 ; gain = 101.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1344.055 ; gain = 129.617
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1351.379 ; gain = 101.410
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'btn_x_reg' in module 'btn_scan'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'parallel2serial'
@@ -309,7 +308,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'next_state_reg' using encoding 'one-hot' in module 'ExceptionUnit'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1344.055 ; gain = 129.617
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1351.379 ; gain = 101.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -380,9 +379,9 @@ Detailed RTL Component Info :
 	   3 Input    2 Bit        Muxes := 7     
 	   2 Input    2 Bit        Muxes := 11    
 	   4 Input    2 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 68    
+	   2 Input    1 Bit        Muxes := 65    
 	   6 Input    1 Bit        Muxes := 6     
-	   3 Input    1 Bit        Muxes := 14    
+	   3 Input    1 Bit        Muxes := 12    
 	   4 Input    1 Bit        Muxes := 10    
 	   5 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -401,7 +400,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1554.465 ; gain = 340.027
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1556.086 ; gain = 306.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -431,13 +430,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 1554.465 ; gain = 340.027
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 1556.086 ; gain = 306.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:01:59 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished Timing Optimization : Time (s): cpu = 00:02:22 ; elapsed = 00:02:29 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -457,7 +456,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:02 ; elapsed = 00:02:07 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished Technology Mapping : Time (s): cpu = 00:02:32 ; elapsed = 00:02:39 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -475,37 +474,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:06 ; elapsed = 00:02:11 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished IO Insertion : Time (s): cpu = 00:02:38 ; elapsed = 00:02:45 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:06 ; elapsed = 00:02:11 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:38 ; elapsed = 00:02:45 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:07 ; elapsed = 00:02:12 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:07 ; elapsed = 00:02:12 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:08 ; elapsed = 00:02:13 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:41 ; elapsed = 00:02:48 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:08 ; elapsed = 00:02:13 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:41 ; elapsed = 00:02:48 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -539,9 +538,9 @@ Report Cell Usage:
 |2     |CARRY4     |    74|
 |3     |LUT1       |    10|
 |4     |LUT2       |   184|
-|5     |LUT3       |   586|
-|6     |LUT4       |   577|
-|7     |LUT5       |   987|
+|5     |LUT3       |   588|
+|6     |LUT4       |   576|
+|7     |LUT5       |   985|
 |8     |LUT6       |  4906|
 |9     |MMCME2_ADV |     1|
 |10    |MUXF7      |   871|
@@ -559,18 +558,18 @@ Report Cell Usage:
 |22    |OBUF       |    25|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:08 ; elapsed = 00:02:13 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:41 ; elapsed = 00:02:49 . Memory (MB): peak = 1657.789 ; gain = 407.820
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:55 ; elapsed = 00:02:08 . Memory (MB): peak = 1660.211 ; gain = 316.156
-Synthesis Optimization Complete : Time (s): cpu = 00:02:08 ; elapsed = 00:02:13 . Memory (MB): peak = 1660.211 ; gain = 445.773
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:32 ; elapsed = 00:02:45 . Memory (MB): peak = 1657.789 ; gain = 306.410
+Synthesis Optimization Complete : Time (s): cpu = 00:02:41 ; elapsed = 00:02:49 . Memory (MB): peak = 1657.789 ; gain = 407.820
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.161 . Memory (MB): peak = 1660.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.182 . Memory (MB): peak = 1657.789 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1208 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1660.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1657.789 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   IBUFGDS => IBUFDS: 1 instance 
@@ -578,11 +577,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
   RAMB16_S1 => RAMB18E1: 1 instance 
 
-Synth Design complete, checksum: 8e69ceb2
+Synth Design complete, checksum: 749fa21c
 INFO: [Common 17-83] Releasing license: Synthesis
 109 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:16 ; elapsed = 00:02:43 . Memory (MB): peak = 1660.211 ; gain = 445.773
-INFO: [Common 17-1381] The checkpoint 'D:/Exp2/Exp2.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:49 ; elapsed = 00:03:02 . Memory (MB): peak = 1657.789 ; gain = 407.820
+INFO: [Common 17-1381] The checkpoint 'D:/Arch Labs/Exp2/Exp2.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 24 18:57:20 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 26 14:59:59 2023...

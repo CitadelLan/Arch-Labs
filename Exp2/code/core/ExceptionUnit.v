@@ -36,21 +36,21 @@ module ExceptionUnit(
         csr_raddr = 12'b0;
     end
 
-    wire[31:0] mstatus;     // mstatus×Ü»áÔÚÊ±ÖÓÕı±ßÑØµÄÊ±ºò¸üĞÂ???
+    wire[31:0] mstatus;     // mstatusæ€»ä¼šåœ¨æ—¶é’Ÿæ­£è¾¹æ²¿çš„æ—¶å€™æ›´æ–°???
 
     CSRRegs csr(.clk(clk),.rst(rst),.csr_w(csr_w),.raddr(csr_raddr),.waddr(csr_waddr),
         .wdata(csr_wdata),.rdata(csr_r_data_out),.mstatus(mstatus),.csr_wsc_mode(csr_wsc));
 
     //According to the diagram, design the Exception Unit
 
-    /* ×´???»ú×´??? */
-    reg[1:0] next_state;    // ×´???»úµ±Ç°×´?
+    /* çŠ¶???æœºçŠ¶??? */
+    reg[1:0] next_state;    // çŠ¶???æœºå½“å‰çŠ¶?
     localparam STATE_IDLE   = 2'b00;
     localparam STATE_MEPC   = 2'b01;
     localparam STATE_MCAUSE = 2'b10;
     initial next_state = STATE_IDLE;
 
-    /* CSR¼Ä´æÆ÷µØ?? */
+    /* CSRå¯„å­˜å™¨åœ°?? */
     localparam mstatus_addr = 12'h300; // {5'h6 , 7'b0000000}
     localparam mtvec_addr   = 12'h305; // {5'h6 , 7'b0000101}
     localparam mepc_addr    = 12'h341; // {5'h6 , 7'b1000001}
@@ -58,31 +58,31 @@ module ExceptionUnit(
     localparam mtval_addr   = 12'h343; // {5'h6 , 7'b1000011}
     localparam mip_addr     = 12'h344; // {5'h6 , 7'b1000100}
 
-    /* CSRÊ¹ÄÜĞÅºÅ */
+    /* CSRä½¿èƒ½ä¿¡å· */
     wire mie;
     assign mie = mstatus[3];
 
-    /* Òì³£ÀàĞÍ·ÖÀà */
-    // wire MRET = mret; (ÒÑÓĞ)
+    /* å¼‚å¸¸ç±»å‹åˆ†ç±» */
+    // wire MRET = mret; (å·²æœ‰)
     wire interrupt_true = interrupt & mie;
     wire [3:0] exception_set = {ecall_m, s_access_fault, l_access_fault, illegal_inst} & {4{mie}};
     wire abnormal_true = mret | interrupt_true | (|exception_set);
 
-    /* FLUSHÊ¹ÄÜ */
+    /* FLUSHä½¿èƒ½ */
     reg flush_MW, flush_def;
     assign reg_FD_flush = flush_def;
     assign reg_DE_flush = flush_def;
     assign reg_EM_flush = flush_def;
     assign reg_MW_flush = flush_MW;
 
-    /* ÖĞ¼ä?? */
+    /* ä¸­é—´?? */
     reg[1:0] curr_mode;
     reg[31:0] epc;
     reg[31:0] cause;
     initial curr_mode <= 2'b00;
     
 
-    /* Êä³ö?? */
+    /* è¾“å‡º?? */
     localparam next_PC = 1'b0;
     localparam redirect = 1'b1;
 
@@ -97,20 +97,20 @@ module ExceptionUnit(
     assign PC_redirect = csr_r_data_out;
     assign RegWrite_cancel = reg_w_cancel;
 
-    /* ÖĞ¶ÏÊ¹ÓÃµÄ×´Ì¬»ú */
+    /* ä¸­æ–­ä½¿ç”¨çš„çŠ¶æ€æœº */
     always@(negedge clk) begin
         case(next_state)
             STATE_IDLE: begin
                 /* 1. STATE_IDLE ??(exception or interruption) STATE_MEPC */
                 if (interrupt_true | (|exception_set)) begin
                     /* 1.1. write mstatus: */
-                    /* 1.1.1. µ÷ÕûĞ´Ê¹?? */
+                    /* 1.1.1. è°ƒæ•´å†™ä½¿?? */
                     csr_w = 1'b1;
 
-                    /* 1.1.2. µ÷ÕûĞ´µØ?? -> CSR¼Ä´æ?? */
+                    /* 1.1.2. è°ƒæ•´å†™åœ°?? -> CSRå¯„å­˜?? */
                     csr_waddr = mstatus_addr;
 
-                    /* 1.1.3. µ÷ÕûĞ´ÄÚ?? -> MPIE = MIE, MIE = 0, 
+                    /* 1.1.3. è°ƒæ•´å†™å†…?? -> MPIE = MIE, MIE = 0, 
                      *        MPP = curr_mode, curr_mode = 2'b11*/
                     csr_wdata = mstatus;
                     csr_wdata[7] = csr_wdata[3];
@@ -118,7 +118,7 @@ module ExceptionUnit(
                     csr_wdata[12:11] = curr_mode;
                     curr_mode = 2'b11;
 
-                    /* 1.1.4. µ÷ÕûĞ´·½?? */
+                    /* 1.1.4. è°ƒæ•´å†™æ–¹?? */
                     csr_wsc = 2'b00;
 
                     /* 1.2. flush all the pipeline registers */
@@ -164,13 +164,13 @@ module ExceptionUnit(
                 /* 2. STATE_IDLE ?? (mret) STATE_IDLE */
                 else if (mret) begin
                     /* 2.1. write mstatus */
-                    /* 2.1.1. µ÷ÕûĞ´Ê¹?? */
+                    /* 2.1.1. è°ƒæ•´å†™ä½¿?? */
                     csr_w = 1'b1;
 
-                    /* 2.1.2. µ÷ÕûĞ´µØ?? -> CSR¼Ä´æ?? */
+                    /* 2.1.2. è°ƒæ•´å†™åœ°?? -> CSRå¯„å­˜?? */
                     csr_waddr = mstatus_addr;
 
-                    /* 2.1.3. µ÷ÕûĞ´ÄÚ?? -> MPIE = MIE, MIE = 0, 
+                    /* 2.1.3. è°ƒæ•´å†™å†…?? -> MPIE = MIE, MIE = 0, 
                      *        curr_mode = MPP, MPP = */
                     csr_wdata = mstatus;
                     csr_wdata[3] = csr_wdata[7];
@@ -178,7 +178,7 @@ module ExceptionUnit(
                     curr_mode = csr_wdata[12:11];
                     csr_wdata[12:11] = 2'b11;
 
-                    /* 2.1.4. µ÷ÕûĞ´·½?? */
+                    /* 2.1.4. è°ƒæ•´å†™æ–¹?? */
                     csr_wsc = 2'b00;
 
                     /* 2.2. read mepc */
@@ -192,7 +192,9 @@ module ExceptionUnit(
                     flush_def = 1'b1;
                     flush_MW = 1'b0;
 
+                    /* others */
                     next_state = STATE_IDLE;
+                    reg_w_cancel = 1'b0;
                 end
                 
                 /* 3. STATE_IDLE ?? (csr insts) STATE_IDLE */
@@ -205,6 +207,7 @@ module ExceptionUnit(
                     csr_wsc   = csr_wsc_mode_in;
 
                     /* other */
+                    next_state = STATE_IDLE;
                     reg_w_cancel = 1'b0;
                     flush_def = 1'b0;
                     flush_MW = 1'b0;
@@ -214,9 +217,9 @@ module ExceptionUnit(
                 /* 4. STATE_IDLE ?? (other) STATE_IDLE */
                 else begin
                     csr_w = 0;
-                    next_state = STATE_IDLE;
 
                     /* other */
+                    next_state = STATE_IDLE;
                     reg_w_cancel = 1'b0;
                     flush_def = 1'b0;
                     flush_MW = 1'b0;
@@ -239,9 +242,8 @@ module ExceptionUnit(
                 ret_mux = redirect;
                 // ret_PC = csr_r_data_out & 32'hFFFFFFFC;    // [1:0]??0
 
-                next_state <= STATE_MCAUSE;
-
                 /* other */
+                next_state <= STATE_MCAUSE;
                 reg_w_cancel = 1'b0;
                 flush_def = 1'b0;
                 flush_MW = 1'b0;
@@ -254,14 +256,13 @@ module ExceptionUnit(
                 csr_waddr   = mcause_addr;
                 csr_wdata   = cause;
                 csr_wsc     = 2'b00;
-                next_state  = STATE_IDLE;
 
-                ret_mux = next_PC;
-                
                 /* other */
+                next_state  = STATE_IDLE;
                 reg_w_cancel = 1'b0;
                 flush_def    = 1'b0;
                 flush_MW     = 1'b0;
+                ret_mux = next_PC;
             end
         endcase
     end

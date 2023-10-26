@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Exp2/Exp2.runs/impl_1'
+HD_PWD='D:/Arch Labs/Exp2/Exp2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

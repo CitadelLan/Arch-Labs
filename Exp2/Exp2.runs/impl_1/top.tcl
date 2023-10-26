@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Exp2/Exp2.runs/impl_1/top.tcl"
+  variable script "D:/Arch Labs/Exp2/Exp2.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,22 +123,21 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7k325tlffg676-2L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Exp2/Exp2.cache/wt [current_project]
-  set_property parent.project_path D:/Exp2/Exp2.xpr [current_project]
-  set_property ip_output_repo D:/Exp2/Exp2.cache/ip [current_project]
+  set_property webtalk.parent_dir {D:/Arch Labs/Exp2/Exp2.cache/wt} [current_project]
+  set_property parent.project_path {D:/Arch Labs/Exp2/Exp2.xpr} [current_project]
+  set_property ip_output_repo {{D:/Arch Labs/Exp2/Exp2.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Exp2/Exp2.runs/synth_1/top.dcp
+  add_files -quiet {{D:/Arch Labs/Exp2/Exp2.runs/synth_1/top.dcp}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/Exp2/code/constraint.xdc
+  read_xdc {{D:/Arch Labs/Exp2/code/constraint.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

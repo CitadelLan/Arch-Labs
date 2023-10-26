@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="72.056 ns"></ZoomStartTime>
-      <ZoomEndTime time="100.806 ns"></ZoomEndTime>
-      <Cursor1Time time="74.213 ns"></Cursor1Time>
+      <ZoomStartTime time="38.451 ns"></ZoomStartTime>
+      <ZoomEndTime time="53.472 ns"></ZoomEndTime>
+      <Cursor1Time time="101.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="181"></NameColumnWidth>
-      <ValueColumnWidth column_width="100"></ValueColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/core_sim/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -40,10 +40,6 @@
       <obj_property name="ElementShortName">PC_IF[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC_IF[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/core_sim/core/inst_WB" type="array">
-      <obj_property name="ElementShortName">inst_WB[31:0]</obj_property>
-      <obj_property name="ObjectShortName">inst_WB[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/core_sim/core/inst_IF" type="array">
       <obj_property name="ElementShortName">inst_IF[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst_IF[31:0]</obj_property>
@@ -55,6 +51,10 @@
    <wvobject fp_name="/core_sim/core/PC_WB" type="array">
       <obj_property name="ElementShortName">PC_WB[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC_WB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/core/inst_WB" type="array">
+      <obj_property name="ElementShortName">inst_WB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_WB[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/core_sim/core/redirect_mux_exp" type="logic">
       <obj_property name="ElementShortName">redirect_mux_exp</obj_property>
@@ -83,5 +83,9 @@
    <wvobject fp_name="/core_sim/core/exp_vector_WB" type="array">
       <obj_property name="ElementShortName">exp_vector_WB[3:0]</obj_property>
       <obj_property name="ObjectShortName">exp_vector_WB[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/core_sim/core/exp_unit/interrupt" type="logic">
+      <obj_property name="ElementShortName">interrupt</obj_property>
+      <obj_property name="ObjectShortName">interrupt</obj_property>
    </wvobject>
 </wave_config>
