@@ -2,8 +2,8 @@
 # Webtalk v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Nov  7 19:10:20 2023
-# Process ID: 4272
+# Start of session at: Thu Nov  9 14:45:00 2023
+# Process ID: 23100
 # Current directory: D:/Arch Labs/Exp4/Exp4.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/Arch Labs/Exp4/Exp4.sim/sim_1/behav/xsim/xsim.dir/sim_top_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Arch Labs/Exp4/Exp4.sim/sim_1/behav/xsim/webtalk.log

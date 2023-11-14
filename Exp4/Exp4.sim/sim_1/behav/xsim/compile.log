@@ -12,5 +12,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Arch Labs/Exp4/code/cache/sim/in
 INFO: [VRFC 10-311] analyzing module inst
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Arch Labs/Exp4/code/cache/sim/sim_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sim_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Arch Labs/Exp4/Exp4.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
