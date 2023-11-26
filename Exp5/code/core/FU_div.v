@@ -19,8 +19,20 @@ module FU_div(
     reg A_valid, B_valid;
     reg[31:0] A_reg, B_reg;
 
-    ...             //to fill sth.in
-
+    always@(posedge clk) begin
+        if(EN & ~state) begin
+            A_valid <= 1;
+            B_valid <= 1;
+            A_reg <= A;
+            B_reg <= B;
+            state <= 1;
+        end
+        else if(res_valid) begin
+            A_valid <= 0;
+            B_valid <= 0;
+            state <= 0;
+        end
+    end
 
     divider div(.aclk(clk),
         .s_axis_dividend_tvalid(A_valid),
