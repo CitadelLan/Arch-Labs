@@ -19,16 +19,22 @@ module FU_mem(
     reg[31:0] rs1_data_reg, rs2_data_reg, imm_reg;
 
     always@(posedge clk) begin
-        if(EN && (state == 0)) begin
+        if(EN & ~|state) begin
             mem_w_reg <= mem_w;
-            bhw_reg <= bhw;
+            bhw_reg <=  bhw;
             rs1_data_reg <= rs1_data;
             rs2_data_reg <= rs2_data;
             imm_reg <= imm;
             state <= 2'b10;
         end
-        else state <= {1'b0, state[1]}; // 逻辑左移一位
+        else begin
+            state <= state >> 1;
+        end
     end
+
+    wire[31:0] addr;
+
+    add_32 add(.a(rs1_data_reg),.b(imm_reg),.c(addr));        //Done
 
     RAM_B ram(.clka(clk),.addra(addr),.dina(rs2_data_reg),.wea(mem_w_reg),
         .douta(mem_data),.mem_u_b_h_w(bhw_reg));

@@ -9,7 +9,7 @@ module FU_ALU(
     output finish
 );
 
-    reg state;  // 判定计算结束标志
+    reg state;
     assign finish = state == 1'b1;
     initial begin
         state = 0;
@@ -19,14 +19,12 @@ module FU_ALU(
     reg[31:0] A, B;
 
     always@(posedge clk) begin
-        /* state == 0，ALU available，填参数 */
-        if(EN & ~state) begin
+        if(EN & ~state) begin // state == 0
             A <= ALUA;
             B <= ALUB;
-            Control <= ALUControl;
+            Control <= ALUControl;  //Done           
             state <= 1;
         end
-        /* state == 1，ALU unavailable，重置状态 */
         else state <= 0;
     end
     

@@ -21,10 +21,10 @@ module FU_div(
 
     always@(posedge clk) begin
         if(EN & ~state) begin
-            A_valid <= 1;
-            B_valid <= 1;
             A_reg <= A;
+            A_valid <= 1;
             B_reg <= B;
+            B_valid <= 1;
             state <= 1;
         end
         else if(res_valid) begin
@@ -32,7 +32,8 @@ module FU_div(
             B_valid <= 0;
             state <= 0;
         end
-    end
+    end            //Done
+
 
     divider div(.aclk(clk),
         .s_axis_dividend_tvalid(A_valid),
