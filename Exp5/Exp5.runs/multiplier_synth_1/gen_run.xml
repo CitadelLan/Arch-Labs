@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="multiplier_synth_1" LaunchPart="xc7k325tffg676-2L" LaunchTime="1636183829">
+<GenRun Id="multiplier_synth_1" LaunchPart="xc7k325tffg676-2L" LaunchTime="1701745792">
   <File Type="PA-TCL" Name="multiplier.tcl"/>
   <File Type="REPORTS-TCL" Name="multiplier_reports.tcl"/>
   <File Type="RDS-RDS" Name="multiplier.vds"/>
@@ -30,6 +30,12 @@
     <Config>
       <Option Name="TopModule" Val="multiplier"/>
       <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">

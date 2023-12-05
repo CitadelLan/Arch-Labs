@@ -1,0 +1,28 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Dec  4 10:10:26 2023
+| Host         : DESKTOP-9A79UKU running 64-bit major release  (build 9200)
+| Command      : upgrade_project -migrate_output_products
+| Project_Path : D:/Arch Labs/Exp5/Exp5.xpr
+------------------------------------------------------------------------------------
+
+Project Status Summary
+
+1. Project IP Status
+--------------------
+This project contains 2 IP and 0 Block Designs.
+
+
+1.1 Project IP Instances
++------------+-------------------------+-------------------------------------+-------------------------------------+
+| Instance   | Status                  | Reason                              | Recommendation                      |
+| Name       |                         |                                     |                                     |
++------------+-------------------------+-------------------------------------+-------------------------------------+
+| multiplier | Will be Migrated.       |                                     |                                     |
++------------+-------------------------+-------------------------------------+-------------------------------------+
+| divider    | Will be Migrated.       |                                     |                                     |
++------------+-------------------------+-------------------------------------+-------------------------------------+
+
+
+
