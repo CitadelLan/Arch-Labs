@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Dec 12 18:11:27 2023
-# Process ID: 14896
+# Start of session at: Tue Dec 26 21:21:13 2023
+# Process ID: 16212
 # Current directory: D:/Arch Labs/Exp6/Exp6.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Arch Labs/Exp6/Exp6.runs/synth_1/top.vds

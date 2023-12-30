@@ -23,7 +23,7 @@ D:/Arch Labs/Exp6/code/common/REG32.v,1630116495,verilog,,D:/Arch Labs/Exp6/code
 D:/Arch Labs/Exp6/code/common/add_32.v,1630116495,verilog,,D:/Arch Labs/Exp6/code/auxillary/btn_scan.v,,add_32,,,../../../../code/auxillary;../../../../code/core,,,,,
 D:/Arch Labs/Exp6/code/common/cmp_32.v,1630116495,verilog,,D:/Arch Labs/Exp6/code/auxillary/debug_clk.v,,cmp_32,,,../../../../code/auxillary;../../../../code/core,,,,,
 D:/Arch Labs/Exp6/code/core/CtrlDefine.vh,1630116495,verilog,,,,,,,,,,,,
-D:/Arch Labs/Exp6/code/core/CtrlUnit.v,1702042170,verilog,,D:/Arch Labs/Exp6/code/core/FU_ALU.v,D:/Arch Labs/Exp6/code/core/CtrlDefine.vh,CtrlUnit,,,../../../../code/auxillary;../../../../code/core,,,,,
+D:/Arch Labs/Exp6/code/core/CtrlUnit.v,1703595785,verilog,,D:/Arch Labs/Exp6/code/core/FU_ALU.v,D:/Arch Labs/Exp6/code/core/CtrlDefine.vh,CtrlUnit,,,../../../../code/auxillary;../../../../code/core,,,,,
 D:/Arch Labs/Exp6/code/core/FU_ALU.v,1630116495,verilog,,D:/Arch Labs/Exp6/code/core/FU_div.v,,FU_ALU,,,../../../../code/auxillary;../../../../code/core,,,,,
 D:/Arch Labs/Exp6/code/core/FU_div.v,1630116495,verilog,,D:/Arch Labs/Exp6/code/core/FU_jump.v,,FU_div,,,../../../../code/auxillary;../../../../code/core,,,,,
 D:/Arch Labs/Exp6/code/core/FU_jump.v,1633008300,verilog,,D:/Arch Labs/Exp6/code/core/FU_mem.v,,FU_jump,,,../../../../code/auxillary;../../../../code/core,,,,,

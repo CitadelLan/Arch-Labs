@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Tue Dec 12 18:16:04 2023
+| Date             : Tue Dec 26 21:25:28 2023
 | Host             : DESKTOP-9A79UKU running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.008 |        7 |       --- |             --- |
-| Slice Logic              |     0.002 |    18641 |       --- |             --- |
-|   LUT as Logic           |     0.001 |     8931 |    203800 |            4.38 |
+| Clocks                   |     0.007 |        7 |       --- |             --- |
+| Slice Logic              |     0.002 |    18684 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     8799 |    203800 |            4.32 |
 |   CARRY4                 |    <0.001 |      547 |     50950 |            1.07 |
 |   Register               |    <0.001 |     6536 |    407600 |            1.60 |
 |   LUT as Distributed RAM |    <0.001 |       22 |     64000 |            0.03 |
-|   F7/F8 Muxes            |    <0.001 |      916 |    203800 |            0.45 |
+|   F7/F8 Muxes            |    <0.001 |     1111 |    203800 |            0.55 |
 |   LUT as Shift Register  |    <0.001 |       13 |     64000 |            0.02 |
 |   Others                 |     0.000 |      678 |       --- |             --- |
-| Signals                  |     0.002 |    13196 |       --- |             --- |
+| Signals                  |     0.002 |    12772 |       --- |             --- |
 | Block RAM                |     0.001 |      0.5 |       445 |            0.11 |
 | MMCM                     |     0.107 |        1 |        10 |           10.00 |
 | I/O                      |     0.007 |       41 |       400 |           10.25 |
@@ -153,7 +153,7 @@ Table of Contents
 | top           |     0.126 |
 |   CLK_DIFF    |     0.004 |
 |   CLK_GEN     |     0.110 |
-|   core        |     0.004 |
+|   core        |     0.005 |
 |     du        |     0.003 |
 |       div     |     0.003 |
 |   vga         |     0.004 |
