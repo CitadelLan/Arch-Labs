@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Oct 10 20:31:03 2023
-# Process ID: 2104
-# Current directory: D:/Exp1/Exp1.runs/impl_1
+# Start of session at: Tue Jan  2 20:08:51 2024
+# Process ID: 12956
+# Current directory: D:/Arch Labs/Exp1/Exp1.runs/impl_1
 # Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
-# Log file: D:/Exp1/Exp1.runs/impl_1/top.vdi
-# Journal file: D:/Exp1/Exp1.runs/impl_1\vivado.jou
+# Log file: D:/Arch Labs/Exp1/Exp1.runs/impl_1/top.vdi
+# Journal file: D:/Arch Labs/Exp1/Exp1.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace

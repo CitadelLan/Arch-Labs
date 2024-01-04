@@ -4,8 +4,8 @@ Running: D:/UWinXilinX/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 1995af
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'PCSource' [D:/Exp1/code/core/RV32core.v:175]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'Addr' [D:/Exp1/code/core/RV32core.v:188]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'DatatoReg' [D:/Exp1/code/core/RV32core.v:192]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'PCSource' [D:/Arch Labs/Exp1/code/core/RV32core.v:175]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'Addr' [D:/Arch Labs/Exp1/code/core/RV32core.v:188]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'DatatoReg' [D:/Arch Labs/Exp1/code/core/RV32core.v:192]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

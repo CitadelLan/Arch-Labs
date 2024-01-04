@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Exp1/Exp1.runs/synth_1'
+HD_PWD='D:/Arch Labs/Exp1/Exp1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

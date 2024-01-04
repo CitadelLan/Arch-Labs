@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Exp1/Exp1.runs/synth_1/top.tcl"
+  variable script "D:/Arch Labs/Exp1/Exp1.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,52 +70,55 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7k325tffg676-2L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Exp1/Exp1.cache/wt [current_project]
-set_property parent.project_path D:/Exp1/Exp1.xpr [current_project]
+set_property webtalk.parent_dir {D:/Arch Labs/Exp1/Exp1.cache/wt} [current_project]
+set_property parent.project_path {D:/Arch Labs/Exp1/Exp1.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/Exp1/Exp1.cache/ip [current_project]
+set_property ip_output_repo {d:/Arch Labs/Exp1/Exp1.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog D:/Exp1/code/auxillary/function.vh
+read_verilog {{D:/Arch Labs/Exp1/code/auxillary/function.vh}}
+set_property file_type "Verilog Header" [get_files {{D:/Arch Labs/Exp1/code/auxillary/function.vh}}]
 read_verilog -library xil_defaultlib {
-  D:/Exp1/code/core/ALU.v
-  D:/Exp1/code/auxillary/CPUTEST.v
-  D:/Exp1/code/auxillary/Code2Inst.v
-  D:/Exp1/code/core/CtrlUnit.v
-  D:/Exp1/code/auxillary/Font816.v
-  D:/Exp1/code/core/HazardDetectionUnit.v
-  D:/Exp1/code/core/ImmGen.v
-  D:/Exp1/code/common/MUX2T1_32.v
-  D:/Exp1/code/common/MUX4T1_32.v
-  D:/Exp1/code/core/RAM_B.v
-  D:/Exp1/code/common/REG32.v
-  D:/Exp1/code/core/REG_EX_MEM.v
-  D:/Exp1/code/core/REG_ID_EX.v
-  D:/Exp1/code/core/REG_IF_ID.v
-  D:/Exp1/code/core/REG_MEM_WB.v
-  D:/Exp1/code/core/ROM_D.v
-  D:/Exp1/code/core/RV32core.v
-  D:/Exp1/code/core/Regs.v
-  D:/Exp1/code/auxillary/VGATEST.v
-  D:/Exp1/code/common/add_32.v
-  D:/Exp1/code/auxillary/btn_scan.v
-  D:/Exp1/code/auxillary/clk_diff.v
-  D:/Exp1/code/common/cmp_32.v
-  D:/Exp1/code/auxillary/debug_clk.v
-  D:/Exp1/code/auxillary/display.v
-  D:/Exp1/code/auxillary/my_clk_gen.v
-  D:/Exp1/code/auxillary/parallel2serial.v
-  D:/Exp1/code/auxillary/vga.v
-  D:/Exp1/code/auxillary/top.v
+  {D:/Arch Labs/Exp1/code/core/ALU.v}
+  {D:/Arch Labs/Exp1/code/auxillary/CPUTEST.v}
+  {D:/Arch Labs/Exp1/code/auxillary/Code2Inst.v}
+  {D:/Arch Labs/Exp1/code/core/CtrlUnit.v}
+  {D:/Arch Labs/Exp1/code/auxillary/Font816.v}
+  {D:/Arch Labs/Exp1/code/core/HazardDetectionUnit.v}
+  {D:/Arch Labs/Exp1/code/core/ImmGen.v}
+  {D:/Arch Labs/Exp1/code/common/MUX2T1_32.v}
+  {D:/Arch Labs/Exp1/code/common/MUX4T1_32.v}
+  {D:/Arch Labs/Exp1/code/core/RAM_B.v}
+  {D:/Arch Labs/Exp1/code/common/REG32.v}
+  {D:/Arch Labs/Exp1/code/core/REG_EX_MEM.v}
+  {D:/Arch Labs/Exp1/code/core/REG_ID_EX.v}
+  {D:/Arch Labs/Exp1/code/core/REG_IF_ID.v}
+  {D:/Arch Labs/Exp1/code/core/REG_MEM_WB.v}
+  {D:/Arch Labs/Exp1/code/core/ROM_D.v}
+  {D:/Arch Labs/Exp1/code/core/RV32core.v}
+  {D:/Arch Labs/Exp1/code/core/Regs.v}
+  {D:/Arch Labs/Exp1/code/auxillary/VGATEST.v}
+  {D:/Arch Labs/Exp1/code/common/add_32.v}
+  {D:/Arch Labs/Exp1/code/auxillary/btn_scan.v}
+  {D:/Arch Labs/Exp1/code/auxillary/clk_diff.v}
+  {D:/Arch Labs/Exp1/code/common/cmp_32.v}
+  {D:/Arch Labs/Exp1/code/auxillary/debug_clk.v}
+  {D:/Arch Labs/Exp1/code/auxillary/display.v}
+  {D:/Arch Labs/Exp1/code/auxillary/my_clk_gen.v}
+  {D:/Arch Labs/Exp1/code/auxillary/parallel2serial.v}
+  {D:/Arch Labs/Exp1/code/auxillary/vga.v}
+  {D:/Arch Labs/Exp1/code/auxillary/top.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -126,8 +129,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Exp1/code/constraint.xdc
-set_property used_in_implementation false [get_files D:/Exp1/code/constraint.xdc]
+read_xdc {{D:/Arch Labs/Exp1/code/constraint.xdc}}
+set_property used_in_implementation false [get_files {{D:/Arch Labs/Exp1/code/constraint.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

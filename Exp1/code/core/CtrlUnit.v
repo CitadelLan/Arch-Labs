@@ -120,8 +120,8 @@ module CtrlUnit(
     assign cmp_ctrl = ({3{BEQ }} & cmp_EQ ) |
                       ({3{BNE }} & cmp_NE ) |
                       ({3{BLT }} & cmp_LT ) |
-                      ({3{BGE }} & cmp_LTU) |
-                      ({3{BLTU}} & cmp_GE ) |
+                      ({3{BLTU }} & cmp_LTU) |
+                      ({3{BGE}} & cmp_GE ) |
                       ({3{BGEU}} & cmp_GEU) ;                         //to fill sth. in 
     // 3'b111 & ${type}
 
